@@ -7,3 +7,4 @@ result.json
 weights/
 wandb/
 .cache/
+.venv/

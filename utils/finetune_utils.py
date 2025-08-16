@@ -18,7 +18,7 @@ def print_trainable_parameters(model):
 
 
 def prepare_dataset(path: str) -> List[str]:
-    with open(path, "r") as f:
+    with open(path, "r", encoding="utf-8") as f:
         sessions = json.load(f)
 
     final_sessions = []
@@ -84,3 +84,8 @@ class DataCollatorForLanguageModelingChatML(DataCollatorForLanguageModeling):
                     if_start = False
 
         return batch
+
+
+# Testing purposes
+if __name__ == "__main__":
+    prepare_dataset("./data/messages.json")
